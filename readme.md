@@ -15,6 +15,12 @@ Change your current directory to the software project you want to visualize and 
 docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/repo --env=DISPLAY gtrafimenkov/codeswarm
 ```
 
+If you see an error like `Can't connect to X11 window server using ':0' as the value of the DISPLAY variable.`, try this command first:
+
+```
+xhost +"local:docker@"
+```
+
 ## Links
 
 [http://vis.cs.ucdavis.edu/~ogawa/codeswarm](http://vis.cs.ucdavis.edu/~ogawa/codeswarm) - An experiment in organic software visualization
